@@ -1,0 +1,57 @@
+ <div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><div class="row">
+  <div class="col-sm-3" style="padding-left:20px"><a href="#!/LoginValidating"><img style="height:56px; width:126px;padding:0px;margin-top:0px;" src="images/download.jpeg"></img></a></div>
+  <div class="col-sm-6" align="center"><h3>Information of {{vm.song.track_title}}</h3></div>
+  <div class="col-sm-3" style="padding-right:20px" align="right"><a href="#!/Login"><h4>Logout</h4></a></div>
+</div></div>
+       </div>
+    </div>
+
+ <br/>
+ 
+ 
+ <div class="container">
+  <div class="row">
+    <div class="col-xs-6"><a ng-href="https://www.youtube.com/watch?v={{vm.song.youtube_id}}">
+ <img class="img-responsive center-block" ng-src="{{vm.song.artwork_large}}"></img>
+ </a></div>
+    <div class="col-xs-3">
+	
+	<div class="short-div"><h4>Artist Details : </h4></div>
+      <div class="short-div">
+ <ul><li ng-repeat="artist in vm.song.artist">{{artist.name}}</li></ul>
+ </div></br>
+<div class="short-div"><h4>General : </h4></div>
+      <div class="short-div">
+ <ul><li ng-repeat="gen in vm.song.gener">{{gen.name}}</li></ul>
+ </div></br>
+<div class="short-div"><h4>In {{vm.song.language}} Language</h4></div>
+  
+</div> 
+  <div class="col-xs-3">
+	
+	<div class="short-div"><h4>Album title : </h4>{{vm.song.album_title}}</div>
+  <br/>
+	<div class="short-div"><h4>Duration : </h4>{{convertToInt(vm.song.duration/60)}} minute {{ vm.song.duration%60}} seconds</div>
+<br/>
+
+<div class="short-div"><h4>Lyrics can be found here : <br/><br/></h4><a ng-href="{{vm.song.lyrics_url}}">{{vm.song.lyrics_url}}</a></div>
+  
+	
+  </div>
+  
+  
+  
+</div>
+ 
+ 
+ <div>
+ <div width="14%>
+ <div>
+ <div width="14%>
+ <div>
+ <div>
+ <br/>
+ 
+ 

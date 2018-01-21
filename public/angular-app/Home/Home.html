@@ -1,0 +1,25 @@
+ <div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><div class="row">
+  <div class="col-sm-3" style="padding-left:20px"><a href="/"><img style="height:56px; width:126px;padding:0px;margin-top:0px;" src="images/download.jpeg"></img></a></div>
+  <div class="col-sm-6" align="center"><h3>Songs that makes you happy</h3></div>
+  <div class="col-sm-3" style="padding-right:20px" align="right"><a href="#!/Login"><h4>Login for Listening Songs</h4></a></div>
+</div></div>
+       </div>
+    </div>
+
+<div class="row">
+
+<div class="col-3 menu">
+  <ul>
+    <li ng-repeat="artist in artistData" ng-init="ArtistName=4" ng-click="artistSelected(artist.name)">{{artist.name}}</li>
+  </ul>
+</div>
+
+<div class="col-9">
+  <h1>{{ArtistName}}</h1>
+  <p>{{ArtistDetails1}}</p>
+  <p>{{ArtistDetails2}}</p>
+</div>
+
+</div>

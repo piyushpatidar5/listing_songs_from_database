@@ -1,0 +1,70 @@
+<div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><div class="row">
+  <div class="col-sm-3" style="padding-left:20px"><a href="/"><img style="height:56px; width:126px;padding:0px;margin-top:0px;" src="images/download.jpeg"></img></a></div>
+  <div class="col-sm-6" align="center"><h3>Signup and Login to Enjoy the Music</h3></div>
+  <div class="col-sm-3"></div>
+</div></div>
+       </div>
+    </div>
+	
+	
+
+<div class="row" align="left">
+  <form name="vm.signIn" ng-submit="vm.login()">
+  
+  <div class="col-sm-6" style="padding:80px">
+  <div class="input-group">
+    <span style="width:40px" class="input-group-addon"><i style="width:35px"  class="glyphicon glyphicon-user"></i></span>
+    <input required style="width:300px" ng-model="vm.Login_email" id="Login_email" type="text" class="form-control" name="email" placeholder="Email">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:40px"  class="input-group-addon"><i style="width:35px" class="glyphicon glyphicon-lock"></i></span>
+    <input required style="width:300px" ng-model="vm.Login_password" id="Login_password" type="password" class="form-control" name="password" placeholder="Password">
+  </div><br/>
+  <br/>
+<button style="width:94px" type="submit" class="btn btn-primary btn-md">Login</button>
+ </div>
+ 
+ </form>
+ <form name="vm.signUP" ng-submit="vm.signUp()">
+   <div class="col-sm-6">
+   <div class="row" align="left" style="padding-left:50px">
+  <div class="col-sm-12">
+  <div class="input-group">
+    <span style="width:94px" class="input-group-addon">First Name</span>
+    <input style="width:300px" required id="fname" ng-model="vm.fname" type="text" class="form-control" name="msg" placeholder="First Name">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:94px" class="input-group-addon">Last Name</span>
+    <input style="width:300px" required id="lname" ng-model="vm.lname" type="text" class="form-control" name="msg" placeholder="Last Name">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:40px" class="input-group-addon"><i style="width:69px"  class="glyphicon glyphicon-user"></i></span>
+    <input style="width:300px" required ng-model="vm.email" id="email" type="text" class="form-control" name="email" placeholder="Email">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:40px" class="input-group-addon"><i style="width:69px" class="glyphicon glyphicon-lock"></i></span>
+    <input style="width:300px" required ng-model="vm.password" id="password" type="password" class="form-control" name="password" placeholder="Password">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:94px" class="input-group-addon">Contact</span>
+    <input style="width:300px" required id="cnumber" ng-model="vm.cnumber" type="number" class="form-control" name="msg" value="+91" placeholder="Contact No">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:94px" class="input-group-addon">DOB</span>
+    <input style="width:300px" required id="dob" ng-model="vm.dob" type="date" class="form-control" name="msg" placeholder="Date Of Birth">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:94px" class="input-group-addon">Address</span>
+    <input style="width:300px" required id="address" ng-model="vm.address" type="text" class="form-control" name="msg" placeholder="Permanent Address">
+  </div>
+  <br/><br/>
+<button style="width:94px" type="submit" class="btn btn-primary btn-md">Signup</button>
+  </div>
+</div>
+   </div>
+
+</form>
+
+</div>

@@ -1,0 +1,69 @@
+ <div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><div class="row">
+  <div class="col-sm-3" style="padding-left:20px"><a href="#!/LoginValidating"><img style="height:56px; width:126px;padding:0px;margin-top:0px;" src="images/download.jpeg"></img></a></div>
+  <div class="col-sm-6" align="center"><h3>Songs that makes you happy</h3></div>
+  <div class="col-sm-3" style="padding-right:20px" align="right"><a href="#!/Login"><h4>Logout</h4></a></div>
+</div></div>
+       </div>
+    </div>
+	
+	
+<div class="row">
+
+<div class="col-3 menu"  align="center"><br/>
+  <ul>
+    <li align="center"><h4>Fill Details of New Song</h4></li>
+  </ul>
+  
+  
+ <form name="vm.songDetails" ng-submit="vm.InsertSongDetails()">
+  <div class="input-group">
+    <span style="width:94px" class="input-group-addon">Artst Name</span>
+    <input style="width:212px" ng-model="vm.aName" id="aName" type="text" class="form-control" name="msg" placeholder="Artst Name">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:94px"  class="input-group-addon">Album title</span>
+    <input style="width:212px" ng-model="vm.albumTitle" id="albumTitle" type="text" class="form-control" name="msg" placeholder="Album title">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:94px"  class="input-group-addon">Youtube Id</span>
+    <input style="width:212px" ng-model="vm.YoutubeId" id="YoutubeId" type="text" class="form-control" name="msg" placeholder="Youtube Id">
+  </div><br/>
+ <div class="input-group">
+    <span style="width:94px"  class="input-group-addon">LrgTrk Img</span>
+    <input style="width:212px" ng-model="vm.track_img_link" id="track_img_link" type="text" class="form-control" name="msg" placeholder="Large icon image link">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:94px"  class="input-group-addon">Trk img Icn</span>
+    <input style="width:212px" ng-model="vm.Icon" id="General" type="text" class="form-control" name="msg" placeholder="Small Icon Link">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:94px"  class="input-group-addon">Duration</span>
+    <input style="width:212px" ng-model="vm.Duration" id="Duration" type="text" class="form-control" name="msg" placeholder="Duration of song">
+  </div><br/>
+  <div class="input-group">
+    <span style="width:94px"  class="input-group-addon">Language</span>
+    <input style="width:212px" ng-model="vm.Language" id="Language" type="text" class="form-control" name="msg" placeholder="Language">
+  </div>
+  <br/>
+<button style="width:94px" type="submit" class="btn btn-primary btn-md">Submit</button>
+  
+</form>
+
+</div>
+
+<div class="col-9">
+    <div ng-repeat="song in vm.songs | orderBy:'track_title'">
+	<div align="center" class="col-xs-3">	<a ng-href='#!/songs/{{song._id}}'><img class="img-responsive center-block" ng-src="{{song.artwork_web}}"></img>
+	<p>{{song.track_title}}<p></a></div>
+</div>
+  
+  </div>
+
+</div>
+
+	
+	
+
+	

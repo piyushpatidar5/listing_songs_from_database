@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="meanSongs">
+<head>
+  <title>MEAN songs</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="css/Home.css" rel="stylesheet"/>
+  
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBJ1X-Eo5RUlAzNQwxdgcBM_1MUxG4a18c",
+    authDomain: "cotton-workers.firebaseapp.com",
+    databaseURL: "https://cotton-workers.firebaseio.com",
+    projectId: "cotton-workers",
+    storageBucket: "cotton-workers.appspot.com",
+    messagingSenderId: "632602561288"
+  };
+  firebase.initializeApp(config);
+</script>
+  
+  
+  </head>
+<body>
+  <div ng-view></div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted text-center">
+        <small>&copy; 2018 Learning MEAN Stack</small>
+      </p>
+    </div>
+  </footer>
+
+  <script src="jquery/jquery-2.1.4.min.js"></script>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <script src="angular-app/app.js"></script>
+  <script src="angular-app/song-list/songs-list-controller.js"></script>
+  <script src="angular-app/song-display/song-display-controller.js"></script>
+  <script src="angular-app/Home/HomeController.js"></script>
+  <script src="angular-app/Login/Login-controller.js"></script>
+  
+  
+
+</body>
+</html>
