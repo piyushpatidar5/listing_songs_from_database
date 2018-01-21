@@ -34,7 +34,7 @@ $http.post('/api/LoginAuthenticate',body).then(function(response){
 		console.log(response.data);
 		vm.login = response.data;
 		if(vm.login!=null){
-			alert("Welcome "+vm.login.userFirstName);
+			//alert("Welcome "+vm.login.userFirstName);
 		window.location = "http://localhost:8800/#!/LoginValidating";
 		}else
 		{

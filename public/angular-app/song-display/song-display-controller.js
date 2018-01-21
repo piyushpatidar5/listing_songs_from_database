@@ -24,4 +24,32 @@ $scope.openInNewTab = function(url) {
   var win = window.open(url, '_blank');
   win.focus();
 };
+
+
+$scope.EditButtonClicked = function(){
+	
+		vm.EditClickedFlag='block';
+	
+	
+};
+
+
+
+$scope.SubmitLink = function(Link,Id){
+	
+		var body = {Id:Id,youtube_link:Link};
+
+		
+	$http.post('/api/songs/EditLink',body).then(function(response){
+		console.log(response.data);
+		vm.song = response.data;
+	});
+	
+	
+	window.location = "http://localhost:8800/#!/LoginValidating";
+		
+	
+};
+
+
 }

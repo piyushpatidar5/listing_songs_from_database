@@ -25,4 +25,12 @@ router
 .post(controllers.LoginAuthentication);
 
 
+router
+.route('/songs/EditLink')
+.post(controllers.UpdateYoutubeLink);
+
+
+
 module.exports = router;
+
+

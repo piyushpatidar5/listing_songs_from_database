@@ -1,21 +1,29 @@
- <div class="panel-group">
+ <div style="z-index: 1;position:fixed;width:100%" class="panel-group">
     <div class="panel panel-info">
       <div class="panel-heading"><div class="row">
-  <div class="col-sm-3" style="padding-left:20px"><a href="#!/LoginValidating"><img style="height:56px; width:126px;padding:0px;margin-top:0px;" src="images/download.jpeg"></img></a></div>
+  <div class="col-sm-3" style="padding-left:20px"><a href="#!/LoginValidating"><img style="height:38px; width:137px;padding:0px;margin-top:10px;" src="images/download.jpeg"></img></a></div>
   <div class="col-sm-6" align="center"><h3>Information of {{vm.song.track_title}}</h3></div>
-  <div class="col-sm-3" style="padding-right:20px" align="right"><a href="#!/Login"><h4>Logout</h4></a></div>
+  <div class="col-sm-3" style="padding-right:20px;padding-top:25px;" align="right"><a href="#!/Login"><h4>Logout</h4></a></div>
 </div></div>
        </div>
     </div>
 
- <br/>
- 
+	<br/><br/>
+	<br/><br/><br/>
  
  <div class="container">
   <div class="row">
-    <div class="col-xs-6"><a ng-href="https://www.youtube.com/watch?v={{vm.song.youtube_id}}">
+  <div align="center">
+  <div class="col-xs-1"><br><br><br><br><br><br>
+  <div class="short-div"><Button class="btn btn-primary btn-md" type="submit" ng-init="vm.EditClickedFlag='none'" ng-click="EditButtonClicked(EditClickedFlag);" style="color:white;"><b>Edit</b></Button></div><br><br>
+  <div style="display:{{vm.EditClickedFlag}}" class="short-div"><input ng-model="vm.Youtube_Link" style="font-size:10px;font-weight:bold;color:red;" class="form-control" placeholder="{{vm.song.youtube_id}}" type="text"></input></div><br>
+  <div style="display:{{vm.EditClickedFlag}}" class="short-div"><Button class="btn btn-primary btn-md" style="font-size:10px;font-weight:bold;color:white;" type="submit" ng-click="SubmitLink(vm.Youtube_Link,vm.song._id);" style="color:white;"><b>Submit Link</b></Button></div><br><br>
+  
+  </div>
+    <div class="col-xs-5"><a ng-href="https://www.youtube.com/watch?v={{vm.song.youtube_id}}">
  <img class="img-responsive center-block" ng-src="{{vm.song.artwork_large}}"></img>
  </a></div>
+ </div>
     <div class="col-xs-3">
 	
 	<div class="short-div"><h4>Artist Details : </h4></div>
@@ -45,13 +53,4 @@
   
 </div>
  
- 
- <div>
- <div width="14%>
- <div>
- <div width="14%>
- <div>
- <div>
- <br/>
- 
- 
+ </div>

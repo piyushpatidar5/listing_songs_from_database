@@ -122,6 +122,28 @@ module.exports.setOneSongsDetails = function(req,res){
 		.json(response);
 	});
 	
+
+};
+
+
+
+module.exports.UpdateYoutubeLink = function(req,res){
+	var db = dbconn.get();
+	var collection = db.collection("songsList");
+	
+	var youtube_link=req.body.youtube_link;
+	var Id = req.body.Id;
+	
+	collection.update( {_id:ObjectId(Id)},{ $set : { youtube_id: youtube_link}},function(err,response){
+		
+	console.log(response.ops);
+	
+		
+		res
+		.status(200)
+		.json(response);
+	});
+	
 };
 
 
